@@ -18,9 +18,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from factorial.views import factorial_view, factorial_template_view
+from Inmultire.views import tabla_inmultirii_view
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('factorial/<n>/', factorial_view),
-    path('template/<n>', factorial_template_view)
+    path('template/<n>/', factorial_template_view),
+    path('inmultire/<num>/', tabla_inmultirii_view),
 ]
