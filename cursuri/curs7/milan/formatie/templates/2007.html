@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            /*background-color: antiquewhite;*/
+            
+        }
+        main {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            background-color: green;
+            height: 80vh;
+            width: 80vw;
+            background-image: url('https://static.flashscore.com/res/_fs/build/symbols.a15cd79.svg#soccerFieldView');
+            background-size: contain; 
+        }
+        section {
+            display:flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 100%;
+            width: 50%;
+        }
+        #romania {
+            /*background-color: yellow;*/
+
+        }
+        #argentina {
+            flex-direction: row-reverse;
+            /*background-color: aqua;*/
+        }
+        .linie{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center ;
+            /*background-color: crimson;*/
+            margin: 3px;
+            height: 100%;
+        }
+        .numejucator {
+            background-color: black;
+            color: white;
+
+        }
+
+    </style>
+</head>
+<body>
+  
+    <main>
+        <section id="romania"> 
+        {% for linie in linii  %}
+             <div class="linie">
+           
+                {% for jucator in linie %}
+           
+                    <div class="jucator">
+                        
+                        <div class="numejucator">   {{jucator}} {{flag}} </div>
+                    </div>
+                
+            
+           
+           {% endfor %}
+         </div>
+
+        {% endfor %}
+
+        </section>
+    </main>
+</body>
+</html>
