@@ -5,14 +5,17 @@ class Optiuni(enum.Enum):
     Rock = 1
     Paper = 2
     Scissors = 3
+    Lizard = 4
+    Spock = 5
 
     def __str__(self):
         return self.name
 
 
+
 while True:
     client = input("Introduceti o valoare 1.Rock, 2.Paper, 3.Scissors\n")
-    server = random.choice([1,2,3])
+    server = random.choice([1,2,3, 4, 5])
     server= Optiuni(server)
 
     try: 
