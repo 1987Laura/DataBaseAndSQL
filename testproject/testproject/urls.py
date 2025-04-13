@@ -1,5 +1,5 @@
 """
-URL configuration for distractie project.
+URL configuration for testproject project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -16,13 +16,8 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path, include
-
-nume_aplicatie = 'joc'
-fisierul = 'urls'
-f'{nume_aplicatie}.{fisierul}'
+from django.urls import path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("joc/", include('joc.urls')),
 ]
